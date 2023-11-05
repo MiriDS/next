@@ -1,8 +1,7 @@
 import localFont from 'next/font/local'
 
 
-
-export const surahNames = [
+const surahNames = [
 	{
 		id: 1,
 		name: "Fatihə surəsi",
