@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 
 
+
 const surahNames = [
 	{
 		id: 1,
