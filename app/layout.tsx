@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 		template: '%s - Learning NextJS',
 		default: 'Learning NextJS'
 	}
-
 }
 
 export default function RootLayout({
@@ -19,7 +18,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-
 				<header>
 					<div className="container">
 						<h1 className="title">Quran App</h1>
@@ -43,8 +41,6 @@ export default function RootLayout({
 							</div>
 						</div> */}
 
-
-
 					</div>
 				</header>
 				<main>
@@ -52,7 +48,6 @@ export default function RootLayout({
 						{children}
 					</div>
 				</main>
-
 			</body>
 		</html>
 	)

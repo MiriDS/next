@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./data.db"
+}
+
+model surah {
+  id           Int                  @id @default(autoincrement())
+  surah_number Int
+  name         String
+  description  String?
+  other_names  Unsupported("clob")?
+}
+
+model ayah {
+  id           Int                      @id @default(autoincrement())
+  surah_number Int
+  ayah_number  Int
+  content      Unsupported("clob")
+  description  String?
+  juz_number   Unsupported("smallint")?
+  hizb_number  Unsupported("smallint")?
+  ayah_type    Unsupported("smallint")?
+}
+
+model doctrine_migration_versions {
+  version        String    @id
+  executed_at    DateTime?
+  execution_time Int?
+}
