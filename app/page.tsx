@@ -11,8 +11,6 @@ const myFont = localFont({
 	display: 'swap',
 })
 
-
-
 type SurahType = {
 	id: number,
 	surah_number: number,

@@ -20,19 +20,3 @@ export async function GET(request: Request) {
 
     return Response.json({ result })
 }
-
-
-// import { PrismaClient } from '@prisma/client'
-
-// const prisma = new PrismaClient()
-
-// export async function GET(request: Request) {
-
-//     const { searchParams } = new URL(request.url)
-//     const q = searchParams.get('q')
-
-//     const email = 'emelie@prisma.io'
-//     const result = await prisma.$queryRaw`SELECT * FROM surah WHERE name LIKE "%" + ${email} + "%"`
-//     console.log(result)
-//     return Response.json({ result })
-// }
