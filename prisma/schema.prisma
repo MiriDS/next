@@ -8,22 +8,21 @@ datasource db {
 }
 
 model surah {
-  id           Int                  @id @default(autoincrement())
+  id           Int     @id @default(autoincrement())
   surah_number Int
   name         String
   description  String?
-  other_names  Unsupported("clob")?
+  other_names  String?
 }
 
 model ayah {
-  id           Int                      @id @default(autoincrement())
-  surah_number Int
-  ayah_number  Int
-  content      Unsupported("clob")
-  description  String?
-  juz_number   Unsupported("smallint")?
-  hizb_number  Unsupported("smallint")?
-  ayah_type    Unsupported("smallint")?
+  id            Int     @id @default(autoincrement())
+  surah_number  Int
+  ayah_number   Int
+  content       String
+  other_content String
+  description   String?
+  ayah_type     Int?
 }
 
 model doctrine_migration_versions {
